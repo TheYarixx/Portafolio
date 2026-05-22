@@ -1,0 +1,522 @@
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap");
+
+/* --- Variables de color --- */
+:root {
+  --bg:          #0d0d0d;
+  --bg-card:     #141414;
+  --bg-input:    #1a1a1a;
+  --border:      #2a2a2a;
+  --border-gold: rgba(196, 164, 100, 0.35);
+  --gold:        #c4a464;
+  --gold-light:  #e0c98a;
+  --text:        #e8e4dc;
+  --text-muted:  #7a766e;
+  --text-dim:    #4a4640;
+  --white:       #f5f2ec;
+}
+
+/* --- Reset base --- */
+*, *::before, *::after { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body::-webkit-scrollbar { width: 4px; }
+body::-webkit-scrollbar-track { background: var(--bg); }
+body::-webkit-scrollbar-thumb { background: var(--gold); border-radius: 2px; }
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "DM Sans", sans-serif;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 1.7;
+  background-color: var(--bg);
+  color: var(--text);
+  letter-spacing: 0.01em;
+}
+
+h1, h2, h3, p { margin: 0; }
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: color 0.25s;
+}
+
+ul { list-style: none; margin: 0; padding: 0; }
+
+img { object-fit: contain; display: block; }
+
+/* --- Línea lateral decorativa --- */
+.side-line {
+  position: fixed;
+  left: 28px;
+  top: 15%;
+  bottom: 15%;
+  width: 1px;
+  background: linear-gradient(to bottom, transparent, var(--gold), transparent);
+  opacity: 0.35;
+  z-index: 10;
+  pointer-events: none;
+}
+
+/* --- Tipografía display --- */
+.highlight {
+  font-family: "Cormorant Garamond", serif;
+  font-style: italic;
+  color: var(--gold-light);
+}
+
+/* --- Etiquetas de sección --- */
+.section-label {
+  font-size: 11px;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 24px;
+}
+
+/* --- Botones --- */
+.btn {
+  display: inline-block;
+  font-family: "DM Sans", sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 12px 28px;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  border: none;
+}
+
+.btn--primary {
+  background: var(--gold);
+  color: var(--bg);
+}
+.btn--primary:hover {
+  background: var(--gold-light);
+  transform: translateY(-2px);
+}
+
+.btn--ghost {
+  background: transparent;
+  color: var(--text);
+  border: 1px solid var(--border);
+}
+.btn--ghost:hover {
+  border-color: var(--gold);
+  color: var(--gold);
+}
+
+.btn--outline {
+  background: transparent;
+  color: var(--gold);
+  border: 1px solid var(--border-gold);
+  font-size: 12px;
+  padding: 9px 20px;
+}
+.btn--outline:hover {
+  background: var(--gold);
+  color: var(--bg);
+}
+
+/* ==========================
+   HEADER / NAV
+========================== */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  padding: 0 60px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  background: rgba(13, 13, 13, 0.85);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border);
+}
+
+.header__nav {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav-logo {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 22px;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  color: var(--gold);
+}
+
+.main-list {
+  display: flex;
+  gap: 48px;
+}
+
+.list-item__link {
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  transition: color 0.2s;
+}
+.list-item__link:hover { color: var(--gold-light); }
+
+/* ==========================
+   HERO
+========================== */
+.main__home {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 120px 80px 80px 120px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* fondo sutil con imagen developer */
+.main__home::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url(../img/developer.png);
+  background-size: cover;
+  background-position: center right;
+  opacity: 0.06;
+  pointer-events: none;
+}
+
+.home__inner {
+  position: relative;
+  max-width: 700px;
+}
+
+.home__eyebrow {
+  display: block;
+  font-size: 11px;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 28px;
+}
+
+.home__title {
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(52px, 7vw, 96px);
+  font-weight: 300;
+  line-height: 1.05;
+  color: var(--white);
+  margin-bottom: 20px;
+}
+
+.home__title em {
+  font-style: italic;
+  color: var(--gold-light);
+}
+
+.home__subtitle {
+  font-size: 14px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-bottom: 48px;
+}
+
+.home__cta-group {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.home__scroll-hint {
+  position: absolute;
+  bottom: 48px;
+  left: 120px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  font-size: 11px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--text-dim);
+}
+
+.home__scroll-line {
+  width: 60px;
+  height: 1px;
+  background: var(--text-dim);
+}
+
+/* ==========================
+   ABOUT
+========================== */
+.main__about {
+  padding: 120px 80px 120px 120px;
+  border-top: 1px solid var(--border);
+}
+
+.about__grid {
+  display: grid;
+  grid-template-columns: 1fr 320px;
+  gap: 80px;
+  align-items: center;
+}
+
+.about__title {
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(40px, 5vw, 68px);
+  font-weight: 300;
+  line-height: 1.1;
+  color: var(--white);
+  margin-bottom: 32px;
+}
+
+.about__bio {
+  font-size: 15px;
+  line-height: 1.8;
+  color: var(--text-muted);
+  margin-bottom: 16px;
+  max-width: 520px;
+}
+
+.about__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 32px;
+}
+
+.tag {
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--gold);
+  border: 1px solid var(--border-gold);
+  padding: 5px 14px;
+  border-radius: 2px;
+}
+
+.about__img-frame {
+  position: relative;
+  margin-right: 55px;
+}
+
+.about__img {
+  width: 290px;
+  height: 290px;
+  object-fit: cover;
+  border-radius: 4px;
+  filter: grayscale(20%);
+}
+
+.about__img-deco {
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  right: -30px;
+  bottom: -5px;
+  border: 1px solid var(--border-gold);
+  border-radius: 4px;
+  z-index: -1;
+}
+
+/* ==========================
+   SKILLS / PROYECTOS
+========================== */
+.main__skills {
+  padding: 120px 80px 120px 120px;
+  border-top: 1px solid var(--border);
+}
+
+.skills__title {
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(40px, 5vw, 68px);
+  font-weight: 300;
+  color: var(--white);
+  line-height: 1.1;
+  margin-bottom: 64px;
+}
+
+.skills-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 2px;
+}
+
+.skill__card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  padding: 40px 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 14px;
+  transition: border-color 0.25s, background 0.25s;
+}
+
+.skill__card:hover {
+  border-color: var(--border-gold);
+  background: #161616;
+}
+
+.skill__img {
+  width: 52px;
+  height: 52px;
+  filter: grayscale(40%) brightness(0.9);
+}
+
+.skill__name {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 22px;
+  font-weight: 400;
+  color: var(--white);
+}
+
+.skill__info {
+  font-size: 13px;
+  line-height: 1.6;
+  color: var(--text-muted);
+  flex: 1;
+}
+
+/* proyecto expandido */
+.skills__project {
+  margin-top: 64px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 24px;
+  padding: 40px;
+  border: 1px solid var(--border-gold);
+  border-radius: 4px;
+  background: var(--bg-card);
+}
+
+.project__img {
+  border-radius: 4px;
+  max-width: 100%;
+}
+
+.project__link {  }
+
+/* ==========================
+   CONTACTO
+========================== */
+.main__feedback {
+  padding: 120px 80px 120px 120px;
+  border-top: 1px solid var(--border);
+}
+
+.feedback__title {
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(40px, 5vw, 68px);
+  font-weight: 300;
+  color: var(--white);
+  line-height: 1.1;
+  margin-bottom: 16px;
+}
+
+.feedback__desc {
+  font-size: 14px;
+  color: var(--text-muted);
+  letter-spacing: 0.05em;
+  margin-bottom: 48px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  max-width: 580px;
+}
+
+.form label { width: 100%; }
+
+.form__input {
+  width: 100%;
+  font-family: "DM Sans", sans-serif;
+  font-size: 14px;
+  background: var(--bg-input);
+  border: 1px solid var(--border);
+  color: var(--text);
+  padding: 16px 20px;
+  border-radius: 3px;
+  transition: border-color 0.2s;
+  outline: none;
+  resize: vertical;
+}
+
+.form__input::placeholder { color: var(--text-dim); }
+.form__input:focus { border-color: var(--gold); }
+
+.form__button {
+  align-self: flex-start;
+  font-size: 13px;
+}
+
+/* ==========================
+   FOOTER
+========================== */
+.footer {
+  border-top: 1px solid var(--border);
+  padding: 32px 80px 32px 120px;
+}
+
+.footer__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.footer__name {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 16px;
+  color: var(--gold);
+}
+
+.footer__copy {
+  font-size: 12px;
+  color: var(--text-dim);
+}
+
+.footer__links {
+  display: flex;
+  gap: 28px;
+}
+
+.footer__link {
+  font-size: 12px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  transition: color 0.2s;
+}
+.footer__link:hover { color: var(--gold); }
+
+/* ==========================
+   RESPONSIVE
+========================== */
+@media (max-width: 900px) {
+  .side-line { display: none; }
+  .header { padding: 0 24px; }
+  .main__home,
+  .main__about,
+  .main__skills,
+  .main__feedback { padding: 100px 24px 80px; }
+  .about__grid { grid-template-columns: 1fr; }
+  .about__img-col { display: none; }
+  .main-list { gap: 24px; }
+  .footer { padding: 24px; }
+}
