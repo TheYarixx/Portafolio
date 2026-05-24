@@ -1,164 +1,434 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
+<head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link rel="stylesheet" href="../static/css/style.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
-    <title>Juan Camilo González — Dev</title>
-  </head>
-  <body>
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    />
 
-    <!-- Línea decorativa izquierda -->
+    <title>Juan Camilo González — Dev</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="./static/css/style.css" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=DM+Sans:wght@300;400;500&display=swap"
+        rel="stylesheet"
+    />
+</head>
+
+<body>
+
+    <!-- Línea lateral -->
     <div class="side-line"></div>
 
+    <!-- HEADER -->
     <header class="header">
-      <nav class="header__nav main-nav">
-        <div class="nav-logo">JCG</div>
-        <ul class="main-nav__list main-list">
-          <li class="main-list__item list-item">
-            <a class="list-item__link" href="#home">Inicio</a>
-          </li>
-          <li class="main-list__item list-item">
-            <a class="list-item__link" href="#about">Sobre mí</a>
-          </li>
-          <li class="main-list__item list-item">
-            <a class="list-item__link" href="#skills">Habilidades</a>
-          </li>
-          <li class="main-list__item list-item">
-            <a class="list-item__link" href="#feedback">Contacto</a>
-          </li>
-        </ul>
-      </nav>
+
+        <nav class="header__nav main-nav">
+
+            <div class="nav-logo">JCG</div>
+
+            <ul class="main-nav__list main-list">
+
+                <li class="main-list__item list-item">
+                    <a class="list-item__link" href="#home">Inicio</a>
+                </li>
+
+                <li class="main-list__item list-item">
+                    <a class="list-item__link" href="#about">Sobre mí</a>
+                </li>
+
+                <li class="main-list__item list-item">
+                    <a class="list-item__link" href="#skills">Habilidades</a>
+                </li>
+
+                <li class="main-list__item list-item">
+                    <a class="list-item__link" href="#feedback">Contacto</a>
+                </li>
+
+            </ul>
+
+        </nav>
+
     </header>
 
+    <!-- MAIN -->
     <main class="main">
 
-      <!-- Hero -->
-      <section class="main__home home" id="home">
-        <div class="home__inner">
-          <span class="home__eyebrow">Bienvenido a mi portafolio</span>
-          <h1 class="home__title">Juan Camilo<br><em>González Yaya</em></h1>
-          <p class="home__subtitle">Programador Junior</p>
-          <div class="home__cta-group">
-            <a href="#about" class="btn btn--primary">Conóceme</a>
-            <a href="#skills" class="btn btn--ghost">Ver proyectos</a>
-          </div>
-        </div>
-        <div class="home__scroll-hint">
-          <span>Scroll</span>
-          <div class="home__scroll-line"></div>
-        </div>
-      </section>
+        <!-- HERO -->
+        <section class="main__home home" id="home">
 
-      <!-- Sobre mí -->
-      <section class="main__about about" id="about">
-        <div class="section-label">01 — Sobre mí</div>
-        <div class="about__grid">
-          <div class="about__text-col">
-            <h2 class="about__title">Hola, soy<br><span class="highlight">Juan Camilo</span></h2>
-            <p class="about__bio">
-              Estudiante y desarrollador web en aprendizaje, apasionado por crear proyectos interactivos, 
-              interfaces modernas y experiencias creativas con código. 
-              Siempre explorando nuevas tecnologías y mejorando mis habilidades en programación y diseño
-            </p>
-            <p class="about__bio">
-              Disponible para proyectos freelance y oportunidades laborales.
-            </p>
-            <div class="about__tags">
-              <span class="tag">Python</span>
-              <span class="tag">HTML/CSS</span>
-              <span class="tag">SQL</span>
-              <span class="tag">Discord Bots</span>
-              <span class="tag">Flask</span>
+            <div class="home__inner">
+
+                <span class="home__eyebrow">
+                    Bienvenido a mi portafolio
+                </span>
+
+                <h1 class="home__title">
+                    Juan Camilo <br>
+                    <em>González Yaya</em>
+                </h1>
+
+                <p class="home__subtitle">
+                    Programador Junior
+                </p>
+
+                <div class="home__cta-group">
+
+                    <a href="#about" class="btn btn--primary">
+                        Conóceme
+                    </a>
+
+                    <a href="#skills" class="btn btn--ghost">
+                        Ver proyectos
+                    </a>
+
+                </div>
+
             </div>
-          </div>
-          <div class="about__img-col">
-            <div class="about__img-frame">
-              <img class="about__img" src="../static/img/profile.png" alt="Juan Camilo González" width="280" height="280" />
-              <div class="about__img-deco"></div>
+
+            <div class="home__scroll-hint">
+                <span>Scroll</span>
+                <div class="home__scroll-line"></div>
             </div>
-          </div>
-        </div>
-      </section>
 
-      <!-- Habilidades -->
-      <section class="main__skills skills" id="skills">
-        <div class="section-label">02 — Proyectos</div>
-        <h2 class="skills__title">Mis <span class="highlight">Habilidades</span></h2>
-        <form action="/" method="POST">
-          <ul class="skills__list skills-list">
-            <li class="skills-list__skill skill">
-              <div class="skill__card">
-                <img class="skill__img" src="../static/img/python.png" alt="python" width="80" height="80" />
-                <h3 class="skill__name">Python</h3>
-                <span class="skill__info">Scripts, automatización y desarrollo backend con Flask.</span>
-                <input class="skill__button btn btn--outline" type="submit" name="button_python" value="Ver Proyecto">
-              </div>
-            </li>
-            <li class="skills-list__skill skill">
-              <div class="skill__card">
-                <img class="skill__img" src="../static/img/discord.png" alt="discord" width="80" height="80" />
-                <h3 class="skill__name">Discord Bots</h3>
-                <span class="skill__info">Bots con comandos, moderación y respuestas automáticas.</span>
-                <input class="skill__button btn btn--outline" type="submit" name="button_discord" value="Ver Proyecto">
-              </div>
-            </li>
-            <li class="skills-list__skill skill">
-              <div class="skill__card">
-                <img class="skill__img" src="../static/img/html.png" alt="html" width="80" height="80" />
-                <h3 class="skill__name">HTML / CSS</h3>
-                <span class="skill__info">Interfaces web responsivas con diseño limpio y moderno.</span>
-                <input class="skill__button btn btn--outline" type="submit" name="button_html" value="Ver Proyecto">
-              </div>
-            </li>
-            <li class="skills-list__skill skill">
-              <div class="skill__card">
-                <img class="skill__img" src="../static/img/db.webp" alt="SQL" width="80" height="80" />
-                <h3 class="skill__name">SQL / Bases de Datos</h3>
-                <span class="skill__info">Diseño y consultas sobre bases de datos relacionales.</span>
-                <input class="skill__button btn btn--outline" type="submit" name="button_db" value="Ver Proyecto">
-              </div>
-            </li>
-          </ul>
-        </form>
-        {% if button_python %}
-          <div class="skills__project project" id="project">
-            <img class="project__img" src="../static/img/python-project.png" alt="Python project" width="500">
-            <a class="project__link btn btn--primary" href="">Abrir en GitHub</a>
-          </div>
-        {% endif %}
-      </section>
+        </section>
 
-      <!-- Contacto -->
-      <section class="main__feedback feedback" id="feedback">
-        <div class="section-label">03 — Contacto</div>
-        <h2 class="feedback__title">Trabajemos<br><span class="highlight">Juntos</span></h2>
-        <p class="feedback__desc">¿Tienes un proyecto o propuesta? Escríbeme.</p>
-        <form action="" method="POST" class="feedback__form form">
-          <label for="email">
-            <input type="email" class="form__input" name="email" id="email" placeholder="Tu correo electrónico" required>
-          </label>
-          <label for="text">
-            <textarea name="text" class="form__input" id="text" cols="70" rows="6" required placeholder="Tu mensaje..."></textarea>
-          </label>
-          <button class="form__button btn btn--primary" type="submit">Enviar mensaje →</button>
-        </form>
-      </section>
+        <!-- SOBRE MÍ -->
+        <section class="main__about about" id="about">
+
+            <div class="section-label">
+                01 — Sobre mí
+            </div>
+
+            <div class="about__grid">
+
+                <div class="about__text-col">
+
+                    <h2 class="about__title">
+                        Hola, soy <br>
+                        <span class="highlight">
+                            Juan Camilo
+                        </span>
+                    </h2>
+
+                    <p class="about__bio">
+                        Estudiante y desarrollador web en aprendizaje,
+                        apasionado por crear proyectos interactivos,
+                        interfaces modernas y experiencias creativas con código.
+                    </p>
+
+                    <p class="about__bio">
+                        Siempre explorando nuevas tecnologías y mejorando
+                        mis habilidades en programación y diseño.
+                    </p>
+
+                    <div class="about__tags">
+
+                        <span class="tag">Python</span>
+                        <span class="tag">HTML/CSS</span>
+                        <span class="tag">SQL</span>
+                        <span class="tag">Discord Bots</span>
+                        <span class="tag">Flask</span>
+
+                    </div>
+
+                </div>
+
+                <div class="about__img-col">
+
+                    <div class="about__img-frame">
+
+                        <img
+                            class="about__img"
+                            src="./static/img/profile.png"
+                            alt="Juan Camilo González"
+                            width="280"
+                            height="280"
+                        />
+
+                        <div class="about__img-deco"></div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- HABILIDADES -->
+        <section class="main__skills skills" id="skills">
+
+            <div class="section-label">
+                02 — Habilidades
+            </div>
+
+            <h2 class="skills__title">
+                Mis <span class="highlight">Habilidades</span>
+            </h2>
+
+            <ul class="skills__list skills-list">
+
+                <!-- PYTHON -->
+                <li class="skills-list__skill skill">
+
+                    <div class="skill__card">
+
+                        <img
+                            class="skill__img"
+                            src="./static/img/python.png"
+                            alt="Python"
+                            width="80"
+                            height="80"
+                        />
+
+                        <h3 class="skill__name">
+                            Python
+                        </h3>
+
+                        <span class="skill__info">
+                            Scripts, automatización y desarrollo backend con Flask.
+                        </span>
+
+                        <a
+                            href="https://github.com/TheYarixx"
+                            target="_blank"
+                            class="skill__button btn btn--outline"
+                        >
+                            Ver Proyecto
+                        </a>
+
+                    </div>
+
+                </li>
+
+                <!-- DISCORD -->
+                <li class="skills-list__skill skill">
+
+                    <div class="skill__card">
+
+                        <img
+                            class="skill__img"
+                            src="./static/img/discord.png"
+                            alt="Discord"
+                            width="80"
+                            height="80"
+                        />
+
+                        <h3 class="skill__name">
+                            Discord Bots
+                        </h3>
+
+                        <span class="skill__info">
+                            Bots con comandos, moderación y respuestas automáticas.
+                        </span>
+
+                        <a
+                            href="https://github.com/TheYarixx"
+                            target="_blank"
+                            class="skill__button btn btn--outline"
+                        >
+                            Ver Proyecto
+                        </a>
+
+                    </div>
+
+                </li>
+
+                <!-- HTML -->
+                <li class="skills-list__skill skill">
+
+                    <div class="skill__card">
+
+                        <img
+                            class="skill__img"
+                            src="./static/img/html.png"
+                            alt="HTML"
+                            width="80"
+                            height="80"
+                        />
+
+                        <h3 class="skill__name">
+                            HTML / CSS
+                        </h3>
+
+                        <span class="skill__info">
+                            Interfaces modernas y responsivas.
+                        </span>
+
+                        <a
+                            href="https://github.com/TheYarixx"
+                            target="_blank"
+                            class="skill__button btn btn--outline"
+                        >
+                            Ver Proyecto
+                        </a>
+
+                    </div>
+
+                </li>
+
+                <!-- SQL -->
+                <li class="skills-list__skill skill">
+
+                    <div class="skill__card">
+
+                        <img
+                            class="skill__img"
+                            src="./static/img/db.webp"
+                            alt="SQL"
+                            width="80"
+                            height="80"
+                        />
+
+                        <h3 class="skill__name">
+                            SQL / Bases de Datos
+                        </h3>
+
+                        <span class="skill__info">
+                            Diseño y consultas sobre bases de datos relacionales.
+                        </span>
+
+                        <a
+                            href="https://github.com/TheYarixx"
+                            target="_blank"
+                            class="skill__button btn btn--outline"
+                        >
+                            Ver Proyecto
+                        </a>
+
+                    </div>
+
+                </li>
+
+            </ul>
+
+        </section>
+
+        <!-- CONTACTO -->
+        <section class="main__feedback feedback" id="feedback">
+
+            <div class="section-label">
+                03 — Contacto
+            </div>
+
+            <h2 class="feedback__title">
+                Trabajemos <br>
+                <span class="highlight">Juntos</span>
+            </h2>
+
+            <p class="feedback__desc">
+                ¿Tienes un proyecto o propuesta? Escríbeme.
+            </p>
+
+            <form class="feedback__form form" id="contact-form">
+
+                <label for="email">
+
+                    <input
+                        type="email"
+                        class="form__input"
+                        id="email"
+                        placeholder="Tu correo electrónico"
+                        required
+                    />
+
+                </label>
+
+                <label for="message">
+
+                    <textarea
+                        class="form__input"
+                        id="message"
+                        cols="70"
+                        rows="6"
+                        placeholder="Tu mensaje..."
+                        required
+                    ></textarea>
+
+                </label>
+
+                <button
+                    class="form__button btn btn--primary"
+                    type="submit"
+                >
+                    Enviar mensaje →
+                </button>
+
+            </form>
+
+        </section>
+
     </main>
 
+    <!-- FOOTER -->
     <footer class="footer">
-      <div class="footer__inner">
-        <span class="footer__name">Juan Camilo González Yaya</span>
-        <span class="footer__copy">© 2025 · Hecho con ❤️ y Python</span>
-        <div class="footer__links">
-          <a href="#" class="footer__link">GitHub</a>
-          <a href="#" class="footer__link">LinkedIn</a>
+
+        <div class="footer__inner">
+
+            <span class="footer__name">
+                Juan Camilo González Yaya
+            </span>
+
+            <span class="footer__copy">
+                © 2025 · Hecho con ❤️ y código
+            </span>
+
+            <div class="footer__links">
+
+                <a
+                    href="https://github.com/TheYarixx"
+                    target="_blank"
+                    class="footer__link"
+                >
+                    GitHub
+                </a>
+
+                <a
+                    href="#"
+                    class="footer__link"
+                >
+                    LinkedIn
+                </a>
+
+            </div>
+
         </div>
-      </div>
+
     </footer>
 
-  </body>
+    <!-- JS -->
+    <script>
+
+        // Formulario dinámico
+
+        const form = document.getElementById("contact-form");
+
+        form.addEventListener("submit", function(event) {
+
+            event.preventDefault();
+
+            // Variables
+            const email = document.getElementById("email").value;
+            const message = document.getElementById("message").value;
+
+            console.log("Email:", email);
+            console.log("Mensaje:", message);
+
+            alert("Mensaje enviado correctamente.");
+
+            form.reset();
+
+        });
+
+    </script>
+
+</body>
 </html>
